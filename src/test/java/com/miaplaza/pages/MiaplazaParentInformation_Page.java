@@ -61,4 +61,11 @@ public class MiaplazaParentInformation_Page {
     @FindBy(xpath = "//ul[3]//li[1]//div[1]//div[2]//div[1]//button[1]")
     public WebElement nextButton2;
 
+    @FindBy(xpath = "(//div[@class='selected-dial-code'])[1]")
+    public WebElement countryBox;
+    @FindBy(xpath = "//li[@data-dial-code='90' and @data-country-code='tr']")
+    public WebElement country;
+    @FindBy(xpath = "//input[@name='PhoneNumber']")
+    public WebElement phoneNumber;
+
 }

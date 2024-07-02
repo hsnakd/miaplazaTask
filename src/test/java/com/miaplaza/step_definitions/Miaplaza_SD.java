@@ -2,6 +2,7 @@ package com.miaplaza.step_definitions;
 
 import com.github.javafaker.Faker;
 import com.miaplaza.pages.*;
+import com.miaplaza.utilities.BrowserUtils;
 import com.miaplaza.utilities.ConfigurationReader;
 import com.miaplaza.utilities.Driver;
 import io.cucumber.java.en.And;
@@ -55,7 +56,13 @@ public class Miaplaza_SD {
         miaplazaParentInformationPage.parent1FirstName.sendKeys(faker.name().firstName());
         miaplazaParentInformationPage.parent1LastName.sendKeys(faker.name().lastName());
         miaplazaParentInformationPage.parent1Email.sendKeys(faker.internet().emailAddress());
-        miaplazaParentInformationPage.parent1PhoneNumber.sendKeys(faker.phoneNumber().cellPhone());
+        miaplazaParentInformationPage.countryBox.click();
+        miaplazaParentInformationPage.country.click();
+        String phoneNumber = BrowserUtils.generateTurkishPhoneNumber(faker);
+        miaplazaParentInformationPage.phoneNumber.sendKeys(phoneNumber);
+
+        /** Old version of the phone number field step */
+//        miaplazaParentInformationPage.parent1PhoneNumber.sendKeys(faker.phoneNumber().cellPhone());
 
         Select secondParentDropdown = new Select(miaplazaParentInformationPage.secondParentDropdown);
         secondParentDropdown.selectByVisibleText("Yes");
