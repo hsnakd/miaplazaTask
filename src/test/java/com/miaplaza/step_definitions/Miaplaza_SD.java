@@ -56,6 +56,8 @@ public class Miaplaza_SD {
         miaplazaParentInformationPage.parent1FirstName.sendKeys(faker.name().firstName());
         miaplazaParentInformationPage.parent1LastName.sendKeys(faker.name().lastName());
         miaplazaParentInformationPage.parent1Email.sendKeys(faker.internet().emailAddress());
+
+        /** New version of the phone number field step */
         miaplazaParentInformationPage.countryBox.click();
         miaplazaParentInformationPage.country.click();
         String phoneNumber = BrowserUtils.generateTurkishPhoneNumber(faker);

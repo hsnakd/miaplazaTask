@@ -29,8 +29,19 @@ public class MiaplazaParentInformation_Page {
     @FindBy(id = "Email1-arialabel")
     public WebElement parent2Email;
 
+    /** Old version of the phone number field step */
     @FindBy(id = "PhoneNumber")
     public WebElement parent1PhoneNumber;
+
+    /** New version of the phone number field step */
+    @FindBy(xpath = "(//div[@class='selected-dial-code'])[1]")
+    public WebElement countryBox;
+    @FindBy(xpath = "//li[@data-dial-code='90' and @data-country-code='tr']")
+    public WebElement country;
+    @FindBy(xpath = "//input[@name='PhoneNumber']")
+    public WebElement phoneNumber;
+
+
     @FindBy(id = "PhoneNumber1")
     public WebElement parent2PhoneNumber;
 
@@ -61,11 +72,6 @@ public class MiaplazaParentInformation_Page {
     @FindBy(xpath = "//ul[3]//li[1]//div[1]//div[2]//div[1]//button[1]")
     public WebElement nextButton2;
 
-    @FindBy(xpath = "(//div[@class='selected-dial-code'])[1]")
-    public WebElement countryBox;
-    @FindBy(xpath = "//li[@data-dial-code='90' and @data-country-code='tr']")
-    public WebElement country;
-    @FindBy(xpath = "//input[@name='PhoneNumber']")
-    public WebElement phoneNumber;
+
 
 }
