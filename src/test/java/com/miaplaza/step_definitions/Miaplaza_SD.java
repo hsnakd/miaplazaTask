@@ -10,6 +10,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.support.ui.Select;
 
 import java.text.SimpleDateFormat;
@@ -83,8 +84,11 @@ public class Miaplaza_SD {
         miaplazaParentInformationPage.startDate.click();
         miaplazaParentInformationPage.year.click();
         miaplazaParentInformationPage.yearField.sendKeys("2024");
-        miaplazaParentInformationPage.month.click();
+//        miaplazaParentInformationPage.month.click();
         miaplazaParentInformationPage.day.click();
+
+//        miaplazaParentInformationPage.preferredDate.sendKeys("26-Aug-2024");
+
 
         // Click the Next Button for Student Information Section
         miaplazaParentInformationPage.nextButton.click();

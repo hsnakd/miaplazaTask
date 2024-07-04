@@ -53,6 +53,9 @@ public class MiaplazaParentInformation_Page {
     @FindBy(xpath = "(//label[@for='Checkbox_10'])[1]")
     public WebElement otherSocialMedia;
 
+    @FindBy(id = "//input[@id='Date-date']")
+    public WebElement preferredDate;
+
     @FindBy(id = "Date-date")
     public WebElement startDate;
 
@@ -62,7 +65,7 @@ public class MiaplazaParentInformation_Page {
     @FindBy(xpath = "//input[@class='select2-search__field']")
     public WebElement yearField;
 
-    @FindBy(xpath = "//*[.='Aug']")
+    @FindBy(xpath = "(//*[.='Aug'])[1]")
     public WebElement month;
     @FindBy(xpath = "//*[.='26']")
     public WebElement day;
